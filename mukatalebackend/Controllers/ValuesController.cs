@@ -1,18 +1,24 @@
-﻿using System;
+﻿using mukatalebackend.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace mukatalebackend.Controllers
 {
+    
+    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class ValuesController : ApiController
     {
+        ApplicationDbContext context = new ApplicationDbContext();
         // GET api/values
-        public IEnumerable<string> Get()
+        public  IEnumerable<Post> Get()
         {
-            return new string[] { "value1", "value2" };
+            var posts = context.Posts.ToList();
+            return posts;
         }
 
         // GET api/values/5
