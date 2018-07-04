@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mukatalebackend", "mukatalebackend\mukatalebackend.csproj", "{4174E255-ACC9-47BE-B547-0453A71964C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mukatalebackendTests", "mukatalebackendTests\mukatalebackendTests.csproj", "{D9444151-501F-41AA-91DA-9F043669C355}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4174E255-ACC9-47BE-B547-0453A71964C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4174E255-ACC9-47BE-B547-0453A71964C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4174E255-ACC9-47BE-B547-0453A71964C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9444151-501F-41AA-91DA-9F043669C355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9444151-501F-41AA-91DA-9F043669C355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9444151-501F-41AA-91DA-9F043669C355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9444151-501F-41AA-91DA-9F043669C355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

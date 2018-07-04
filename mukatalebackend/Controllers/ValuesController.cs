@@ -1,4 +1,5 @@
 ﻿using mukatalebackend.Models;
+using mukatalebackend.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,14 +23,28 @@ namespace mukatalebackend.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public Post Get(int? id)
         {
-            return "value";
+            var post = context.Posts.Find(id);
+            return post;
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public HttpResponseMessage Post(PublicPost post)
         {
+            var NewPost = new Post
+            {
+                Title=post.Title,
+                Descritpion=post.Description,
+                ImageFile=post.ImagePath,
+                CreatedAt=DateTime.Now
+            };
+            context.Posts.Add(NewPost);
+            context.SaveChanges();
+            var createdPost = Get(NewPost.Id);
+
+        
+            return Request.CreateResponse<Post>(HttpStatusCode.Created, createdPost);
         }
 
         // PUT api/values/5
